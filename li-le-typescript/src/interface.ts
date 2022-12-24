@@ -1,6 +1,8 @@
+type ContactName = string; // Type alias;
+
 interface User {
     id: number;
-    name: string;
+    name: ContactName;
     birthDate?: Date; // Optional property
     address?: Address; // Optional nested interface property
 }
@@ -25,4 +27,3 @@ let otherUser: User;
 activeUser = { id: 1 , name:"John", birthDate: new Date("1/1/2000")};
 secondaryUser = { id: 2 , name:"Jane"};
 otherUser = { id: 2 , name:"Jane", address: { street: "123 Main St", city: "Anytown", state: "CA", zip: 12345 }};
-
