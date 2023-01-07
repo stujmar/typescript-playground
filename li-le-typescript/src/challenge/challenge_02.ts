@@ -2,15 +2,20 @@ interface TodoItem {
     id: number;
     title: string;
     completedOn?: Date;
-    status?: 'active' | 'deactive';
+    status?: TodoStatus;
+}
+
+enum TodoStatus{
+    Active = 'active',
+    Deactive = 'deactive'
 }
 
 interface todoList extends Array<TodoItem>{}
 
 const todoItems: todoList = [
     { id: 1, title: 'Buy milk', completedOn: new Date("2021-09-11") },
-    { id: 2, title: 'Buy bread', status: 'active' },
-    { id: 3, title: 'Buy cheese', status: 'deactive' },
+    { id: 2, title: 'Buy bread', status: TodoStatus.Active },
+    { id: 3, title: 'Buy cheese', status: TodoStatus.Deactive },
 ];
 
 function addItem(item: TodoItem, list: todoList): todoList {
