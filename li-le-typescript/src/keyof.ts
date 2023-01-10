@@ -11,7 +11,7 @@ function getValue(source, propertyName: keyof Contact) {
 }
 
 const value = getValue(primaryUser, "name");
-const value2 = getValue(primaryUser, "namee");
+// const value2 = getValue(primaryUser, "namee"); // intentional error
 
 function getGenericValue<T>(source: T, propertyName: keyof T) {
     return source[propertyName]
@@ -19,4 +19,4 @@ function getGenericValue<T>(source: T, propertyName: keyof T) {
 
 const value3 = getGenericValue({"name": "stu", "level": "cool"}, "name");
 const value4 = getGenericValue({"name": "stu", "level": "cool"}, "level");
-// const value5 = getGenericValue({"name": "stu", "level": "cool"}, "cool");
+// const value5 = getGenericValue({"name": "stu", "level": "cool"}, "cool"); // intentional error
