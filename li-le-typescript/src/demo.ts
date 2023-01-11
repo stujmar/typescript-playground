@@ -1,7 +1,14 @@
-class Contact {
-    id;
-    name;
-    birthDate;
+// class Contact {
+//     id;
+//     name;
+//     birthDate;
+// }
+
+type Contact = {
+    id: number,
+    name: string,
+    status?: "active" | "inactive",
+    birthDate?: Date,
 }
 
 // Definte a variable as a number.
@@ -23,4 +30,4 @@ let c: boolean[] = [true, false, true];
 // Definte a variable as an any array.
 let d: any[] = [1, "a", true];
 // Definte a variable as a Contact object (or any other class).
-let e: Contact = new Contact();
+// let e: Contact = new Contact();
